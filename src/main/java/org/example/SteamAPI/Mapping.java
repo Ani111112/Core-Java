@@ -1,5 +1,6 @@
 package org.example.SteamAPI;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,5 +20,11 @@ public class Mapping {
         List<Integer> numbers = List.of(12, 10, 5, 7, 3, 16);
         List<Integer> newNumbers = numbers.stream().map(ele -> (int)Math.sqrt(ele)).collect(Collectors.toList()); // Getting the Square root
         System.out.println(newNumbers);
+
+        //print longest string
+        List<String> strings = List.of("hello", "ani", "aniruddha", "Software", "hello world");
+        System.out.println(strings.stream()
+                .map(s -> s.length())
+                .max(Integer::compareTo).orElse(0));
     }
 }
