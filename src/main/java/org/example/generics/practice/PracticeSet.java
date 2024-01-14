@@ -58,6 +58,18 @@ public class PracticeSet {
         Integer[] arr2 = {4, 7, 3, 6, 7};
         concatenateTwoArrayOfSameType(arr, arr2);
         concatenateTwoArrayOfSameType(str1, new String[]{"hello world", "java"});
+
+        //Implement a generic method to check if two arrays of any type are equal.
+        equalOfTwoArrays(new Integer[]{4, 7, 3, 6, 7}, arr2);
+        equalOfTwoArrays(arr, arr2);
+        equalOfTwoArrays(new String[]{"hi"}, new String[]{"hi"});
+
+    }
+
+    private static <T>void equalOfTwoArrays(T[] arr, T[] arr2) {
+        if (arr.getClass() == arr2.getClass() && arr.length == arr2.length && Arrays.equals(arr, arr2)) {
+            System.out.println(true);
+        }else System.out.println(false);
     }
 
     private static <T>void concatenateTwoArrayOfSameType(T[] arr, T[] arr2) {
