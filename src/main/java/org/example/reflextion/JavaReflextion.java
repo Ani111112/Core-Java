@@ -1,11 +1,12 @@
 package org.example.reflextion;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class JavaReflextion {
-    public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException {
+    public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
         //Create a program to get the class name of an object using reflection.
         Person person = new Person("aniruddha", 26);
         System.out.println(person.getClass());
@@ -38,5 +39,27 @@ public class JavaReflextion {
             }
 
         }
+
+        //Create an instance of a class dynamically using reflection.
+        Person person1 = Person.class.getDeclaredConstructor().newInstance();
+        System.out.println(person1.getClass().getName());
+
+        //Implement a program to set the value of a private field using reflection.
+        for (Field field : fields) {
+            if (field.getName().equals("name")) {
+                System.out.println(person.getName());
+                field.setAccessible(true);
+                field.set(person, "arindam");
+                System.out.println(person.getName());
+            }
+        }
+
+        //Check if a class has a specific annotation using reflection.
+//        Person annotations = Person.class.getAnnotation(Class<A> Person.class);
+//        for (Annotation annotation : annotations) {
+//            if (annotation.equals("Setter")) {
+//                System.out.println(annotation);
+//            }
+//        }
     }
 }

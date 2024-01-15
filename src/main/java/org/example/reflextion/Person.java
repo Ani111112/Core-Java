@@ -1,11 +1,16 @@
 package org.example.reflextion;
 
+import lombok.Setter;
+
 import java.security.PrivateKey;
 
+@Setter
 public class Person {
     private String name;
     private int age;
+    public Person() {
 
+    }
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
