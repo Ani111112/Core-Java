@@ -53,13 +53,5 @@ public class JavaReflextion {
                 System.out.println(person.getName());
             }
         }
-
-        //Check if a class has a specific annotation using reflection.
-//        Person annotations = Person.class.getAnnotation(Class<A> Person.class);
-//        for (Annotation annotation : annotations) {
-//            if (annotation.equals("Setter")) {
-//                System.out.println(annotation);
-//            }
-//        }
     }
 }
