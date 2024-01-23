@@ -4,9 +4,9 @@ public class EnumClass {
     public static void main(String[] args) {
         //Create an enum named DaysOfWeek with constants representing the days of the week.
         // Write a method that accepts a DaysOfWeek parameter and returns the next day.
-        Enum day = JavaEnum.SUNDAY;
-        if (day == JavaEnum.SUNDAY) {
-            System.out.println(JavaEnum.MONDAY);
+        Enum day = DaysOfWeek.SUNDAY;
+        if (day == DaysOfWeek.SUNDAY) {
+            System.out.println(DaysOfWeek.MONDAY);
         }
 
         //Define an enum named Direction with constants representing directions (UP, DOWN, LEFT, RIGHT).

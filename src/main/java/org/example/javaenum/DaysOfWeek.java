@@ -1,6 +1,6 @@
 package org.example.javaenum;
 
-public enum JavaEnum {
+public enum DaysOfWeek {
     SUNDAY,
     MONDAY,
     TUESDAY,
